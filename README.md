@@ -125,10 +125,10 @@ O sistema é dividido em duas camadas que se comunicam via rede local Wi-Fi util
 | LED branco | 1 | Indicador visual físico — controlado pelo botão branco / Unity |
 | LED amarelo | 1 | Indicador visual físico — controlado pelo botão amarelo / Unity |
 | LED de status | 1 | Indica se há um cliente WebSocket conectado |
-| Resistores 220Ω | 5 | Proteção dos LEDs contra sobrecorrente |
-| Resistores 10kΩ | 4 | Pull-up externo opcional para os botões |
+| Resistores 220Ω | 4 | Proteção dos LEDs contra sobrecorrente |
 | Protoboard | 1 | Montagem do circuito |
 | Cabos jumper | — | Conexões entre componentes |
+| Resistores 10kΩ | 4 | Pull-up externo opcional para os botões |
 
 ---
 
@@ -145,9 +145,8 @@ O sistema é dividido em duas camadas que se comunicam via rede local Wi-Fi util
 | GPIO 25 | LED Azul | Saída | Controlado pelo botão azul e pela Unity |
 | GPIO 12 | LED Branco | Saída | Controlado pelo botão branco e pela Unity |
 | GPIO 13 | LED Amarelo | Saída | Controlado pelo botão amarelo e pela Unity |
-| GPIO 15 | LED Status | Saída | Acende quando um cliente WebSocket se conecta |
+| GPIO 2 | LED Status | Saída | Acende quando um cliente WebSocket se conecta |
 
-> **Atenção:** Evitar o uso do GPIO 2 para botões com `INPUT_PULLUP`. Esse pino possui um LED interno na placa e pode apresentar leitura incorreta durante o boot, causando estado falso de "pressionado".
 
 ---
 
@@ -383,4 +382,4 @@ Com o objeto `ESP32Manager` selecionado, arraste os elementos da cena para os ca
 
 ---
 
-> **Dica:** Certifique-se de que o Meta Quest 2 está conectado à mesma rede Wi-Fi do ESP32 antes de abrir a aplicação no headset. A comunicação WebSocket só funciona em rede local.
+> **ATENÇÃO:** Certifique-se de que o Meta Quest 2 está conectado à mesma rede Wi-Fi do ESP32 antes de abrir a aplicação no headset. A comunicação WebSocket só funciona em rede local.
